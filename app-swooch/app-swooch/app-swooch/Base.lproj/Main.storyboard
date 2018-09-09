@@ -42,6 +42,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kDx-Ix-5El" kind="show" id="3WP-yj-GyT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohz-9i-7i3">
                                 <rect key="frame" x="100" y="120" width="175" height="48"/>
@@ -145,6 +148,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Bl3-dR-JC0" kind="show" id="CYk-Yv-mqm"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="kPs-P7-9c4">
                                 <rect key="frame" x="0.0" y="40" width="375" height="92"/>
@@ -164,11 +170,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-dm-75g">
+                                <rect key="frame" x="10" y="35" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="6W8-Ue-jZ5"/>
+                                    <constraint firstAttribute="width" constant="30" id="oLK-Db-iL3"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="wFL-s4-ZTL" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="eOX-O2-wlC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hjq-yX-qXT" firstAttribute="leading" secondItem="4HU-Ue-Ib4" secondAttribute="leading" constant="20" id="3BV-O8-FCI"/>
                             <constraint firstItem="4HU-Ue-Ib4" firstAttribute="trailing" secondItem="xDg-Vy-8tc" secondAttribute="trailing" constant="20" id="3ya-Ca-vbV"/>
+                            <constraint firstItem="nfH-dm-75g" firstAttribute="leading" secondItem="4HU-Ue-Ib4" secondAttribute="leading" constant="10" id="5zd-ur-RMh"/>
                             <constraint firstItem="4HU-Ue-Ib4" firstAttribute="trailing" secondItem="kPs-P7-9c4" secondAttribute="trailing" id="Mkb-L3-LhZ"/>
                             <constraint firstItem="k8L-WW-Itr" firstAttribute="top" secondItem="S1u-GL-YFd" secondAttribute="top" id="Q0A-PN-CwU"/>
                             <constraint firstItem="kPs-P7-9c4" firstAttribute="leading" secondItem="4HU-Ue-Ib4" secondAttribute="leading" id="fjW-US-hHK"/>
@@ -176,6 +194,7 @@
                             <constraint firstItem="4HU-Ue-Ib4" firstAttribute="trailing" secondItem="hjq-yX-qXT" secondAttribute="trailing" constant="20" id="oWU-C2-2bK"/>
                             <constraint firstItem="xDg-Vy-8tc" firstAttribute="top" secondItem="kPs-P7-9c4" secondAttribute="bottom" constant="50" id="p0X-0h-6Vs"/>
                             <constraint firstItem="xDg-Vy-8tc" firstAttribute="leading" secondItem="4HU-Ue-Ib4" secondAttribute="leading" constant="20" id="st9-xx-GEc"/>
+                            <constraint firstItem="nfH-dm-75g" firstAttribute="top" secondItem="S1u-GL-YFd" secondAttribute="top" constant="35" id="tQp-PM-kNr"/>
                             <constraint firstItem="k8L-WW-Itr" firstAttribute="leading" secondItem="4HU-Ue-Ib4" secondAttribute="leading" id="w6m-jv-eeY"/>
                             <constraint firstItem="k8L-WW-Itr" firstAttribute="bottom" secondItem="4HU-Ue-Ib4" secondAttribute="bottom" id="xBr-AY-lZJ"/>
                             <constraint firstItem="4HU-Ue-Ib4" firstAttribute="bottom" secondItem="hjq-yX-qXT" secondAttribute="bottom" constant="20" id="xDS-07-yKa"/>
@@ -185,8 +204,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5v-xR-5jR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wFL-s4-ZTL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="983" y="134"/>
+            <point key="canvasLocation" x="981.60000000000002" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xBb-XL-76j">
@@ -282,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
         <image name="welcomeScreenBG" width="414" height="736"/>
